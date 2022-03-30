@@ -14,3 +14,4 @@ D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.csproj.CoreCo
 D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.dll
 D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.pdb
 D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.genruntimeconfig.cache
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.csprojAssemblyReference.cache

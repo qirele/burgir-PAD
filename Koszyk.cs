@@ -8,17 +8,21 @@ using System.Windows.Forms;
 
 namespace burgir
 {
+
     public partial class Koszyk : Form
     {
-        public Koszyk()
+        string koszykPrawdziwy;
+
+        public Koszyk(string koszyk)
         {
             InitializeComponent();
+            koszykPrawdziwy = koszyk;
             
         }
 
         private void Koszyk_Load(object sender, EventArgs e)
         {
-            
+            lbRachunek.Text = koszykPrawdziwy;
         }
     }
 }

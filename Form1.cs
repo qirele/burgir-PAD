@@ -18,9 +18,11 @@ namespace burgir
         {
             public double cena { get; set; }
             public string nazwa { get; set; }
+            
         }
-
         List<Burger> koszyk = new List<Burger>();
+
+
         public Form1()
         {
             InitializeComponent();
@@ -36,38 +38,43 @@ namespace burgir
         private void btnDodajDoKosz1_Click(object sender, EventArgs e)
         {
             
-            ObslugaDodaniaDoKoszyka(lbBurga1.Text, Convert.ToDouble(cena1.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga1.Text, double.Parse(cena1.Text.Replace(" zł", "")));
             
         }
         private void btnDodajDoKosz2_Click(object sender, EventArgs e)
         {
-            ObslugaDodaniaDoKoszyka(lbBurga2.Text, Convert.ToDouble(cena2.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga2.Text, double.Parse(cena2.Text.Replace(" zł", "")));
         }
 
         private void btnDodajDoKosz3_Click(object sender, EventArgs e)
         {
-            ObslugaDodaniaDoKoszyka(lbBurga3.Text, Convert.ToDouble(cena3.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga3.Text, double.Parse(cena3.Text.Replace(" zł", "")));
         }
         private void btnDodajDoKosz4_Click(object sender, EventArgs e)
         {
-            ObslugaDodaniaDoKoszyka(lbBurga4.Text, Convert.ToDouble(cena4.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga4.Text, double.Parse(cena4.Text.Replace(" zł", "")));
         }
 
         private void btnDodajDoKosz5_Click(object sender, EventArgs e)
         {
-            ObslugaDodaniaDoKoszyka(lbBurga5.Text, Convert.ToDouble(cena5.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga5.Text, double.Parse(cena5.Text.Replace(" zł", "")));
         }
 
         private void btnDodajDoKosz6_Click(object sender, EventArgs e)
         {
-            ObslugaDodaniaDoKoszyka(lbBurga6.Text, Convert.ToDouble(cena6.Text.Split(" ")[0]));
+            ObslugaDodaniaDoKoszyka(lbBurga6.Text, double.Parse(cena6.Text.Replace(" zł", "")));
         }
 
-        
+        private void btnOtworzKoszyk_Click(object sender, EventArgs e)
+        {
+            string building = "";
+            foreach (var burg in koszyk)
+            {
+                building += $"{burg.nazwa} {burg.cena}\n";
+            }
 
-        
-
-
-
+            var koszyk2 = new Koszyk(building);
+            koszyk2.ShowDialog();
+        }
     }
 }

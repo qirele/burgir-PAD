@@ -61,7 +61,7 @@ namespace burgir
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lbBurga6 = new System.Windows.Forms.Label();
             this.cena6 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnOtworzKoszyk = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,7 +184,7 @@ namespace burgir
             this.cena2.Name = "cena2";
             this.cena2.Size = new System.Drawing.Size(45, 15);
             this.cena2.TabIndex = 1;
-            this.cena2.Text = "35.59 zł";
+            this.cena2.Text = "35,59 zł";
             // 
             // btnDodajDoKosz3
             // 
@@ -386,14 +386,15 @@ namespace burgir
             this.cena6.TabIndex = 1;
             this.cena6.Text = "36 zł";
             // 
-            // button7
+            // btnOtworzKoszyk
             // 
-            this.button7.Location = new System.Drawing.Point(366, 715);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Koszyk";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnOtworzKoszyk.Location = new System.Drawing.Point(366, 715);
+            this.btnOtworzKoszyk.Name = "btnOtworzKoszyk";
+            this.btnOtworzKoszyk.Size = new System.Drawing.Size(75, 23);
+            this.btnOtworzKoszyk.TabIndex = 5;
+            this.btnOtworzKoszyk.Text = "Koszyk";
+            this.btnOtworzKoszyk.UseVisualStyleBackColor = true;
+            this.btnOtworzKoszyk.Click += new System.EventHandler(this.btnOtworzKoszyk_Click);
             // 
             // button8
             // 
@@ -410,7 +411,7 @@ namespace burgir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 761);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnOtworzKoszyk);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -476,7 +477,7 @@ namespace burgir
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label lbBurga6;
         private System.Windows.Forms.Label cena6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnOtworzKoszyk;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lbBurga;
     }
