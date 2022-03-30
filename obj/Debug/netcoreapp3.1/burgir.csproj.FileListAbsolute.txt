@@ -1,0 +1,16 @@
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.exe
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.deps.json
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.runtimeconfig.json
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.runtimeconfig.dev.json
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.dll
+D:\Development\desktopoweAPP\burgir\bin\Debug\netcoreapp3.1\burgir.pdb
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.Form1.resources
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.Koszyk.resources
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.Properties.Resources.resources
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.csproj.GenerateResource.cache
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.AssemblyInfoInputs.cache
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.AssemblyInfo.cs
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.csproj.CoreCompileInputs.cache
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.dll
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.pdb
+D:\Development\desktopoweAPP\burgir\obj\Debug\netcoreapp3.1\burgir.genruntimeconfig.cache
