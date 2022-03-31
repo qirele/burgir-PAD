@@ -111,7 +111,7 @@ namespace burgir
 
         private void btnZamawiam_Click(object sender, EventArgs e)
         {
-            if (koszykPrawdziwy == "")
+            if (koszykPrawdziwy == "" || lacznie == 0)
             {
                 MessageBox.Show("Prosze cos zamów");
                 return;
