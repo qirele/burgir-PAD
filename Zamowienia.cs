@@ -10,12 +10,12 @@ namespace burgir
 {
     public partial class Zamowienia : Form
     {
-        string[] zamowienie;
+        Dictionary<string, int> iloscBurgerow;
 
-        public Zamowienia(string[] zamowienie_)
+        public Zamowienia(Dictionary<string, int> il)
         {
             InitializeComponent();
-            zamowienie = zamowienie_;
+            iloscBurgerow = il;
         }
 
     }

@@ -94,6 +94,9 @@ namespace burgir
             koszykForm.ShowDialog();
         }
 
-        
+        private void btnBazaZamow_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

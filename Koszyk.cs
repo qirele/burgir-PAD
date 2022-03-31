@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -29,9 +31,11 @@ namespace burgir
             lacznie = cenaZaWszystko;
             iloscBurgerow = iloscBurgerow_;
 
-            
 
-            
+            randomLiczba = new Random().Next(1, 21);
+            iloscProb = 5;
+            kod = kody[new Random().Next(0, kody.Length)];
+
         }
 
         private void Koszyk_Load(object sender, EventArgs e)
@@ -113,7 +117,7 @@ namespace burgir
                 return;
             }
 
-            var zamow = new Zamowienia(koszykPrawdziwy.Split("\n"));
+            var zamow = new Zamowienia(iloscBurgerow);
             
 
             koszykPrawdziwy = "";
@@ -126,10 +130,50 @@ namespace burgir
             paragonForm.ShowDialog();
 
 
+            string filePath = Application.StartupPath + @"baza_zamowienia.txt";
+            List<string> wiersze = new List<string>();
+            wiersze = File.ReadAllLines(filePath).ToList();
+
+            int ID_zamowienia = znajdzMaxID(wiersze);
+
+            string dictToString = "";
+            foreach (KeyValuePair<string, int> entry in iloscBurgerow)
+            {
+                dictToString += $"{entry.Key.Replace(",",".")} {entry.Value}, ";
+            }
+            dictToString = dictToString.Remove(dictToString.Length - 6, 6);
 
 
+            wiersze.Add($"{ID_zamowienia}, {dictToString}");
 
-            //MessageBox.Show($@"{Application.StartupPath}baza_zamowienia.txt");
+            File.WriteAllLines(filePath, wiersze);
+
+
+            
         }
+        private int znajdzMaxID(List<string> wiersze)
+        {
+            int id;
+            if (wiersze.Count == 0)
+            {
+                id = 1;
+            }
+            else
+            {
+                /* zapisz kazde id w kazdym wierszu do tablicy */
+                List<int> lista_id = new List<int>();
+                for (int i = 0; i < wiersze.Count; i++)
+                {
+                    lista_id.Add(Convert.ToInt32(wiersze[i].Split(",")[0]));
+                }
+
+                /* znajdz maksymalne id */
+
+                id = lista_id.Max() + 1;
+            }
+
+            return id;
+        }
+
     }
 }

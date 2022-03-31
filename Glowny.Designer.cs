@@ -63,6 +63,7 @@ namespace burgir
             this.cena6 = new System.Windows.Forms.Label();
             this.btnOtworzKoszyk = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnBazaZamow = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -405,11 +406,22 @@ namespace burgir
             this.button8.Text = "Zamknij";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // btnBazaZamow
+            // 
+            this.btnBazaZamow.Location = new System.Drawing.Point(59, 705);
+            this.btnBazaZamow.Name = "btnBazaZamow";
+            this.btnBazaZamow.Size = new System.Drawing.Size(75, 23);
+            this.btnBazaZamow.TabIndex = 7;
+            this.btnBazaZamow.Text = "Baza zamówień";
+            this.btnBazaZamow.UseVisualStyleBackColor = true;
+            this.btnBazaZamow.Click += new System.EventHandler(this.btnBazaZamow_Click);
+            // 
             // Glowny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 761);
+            this.Controls.Add(this.btnBazaZamow);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.btnOtworzKoszyk);
             this.Controls.Add(this.groupBox6);
@@ -481,6 +493,7 @@ namespace burgir
         private System.Windows.Forms.Button btnOtworzKoszyk;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lbBurga;
+        private System.Windows.Forms.Button btnBazaZamow;
     }
 }
 
