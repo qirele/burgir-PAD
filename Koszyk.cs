@@ -13,6 +13,7 @@ namespace burgir
     {
         string koszykPrawdziwy;
         double lacznie;
+        Dictionary<string, int> iloscBurgerow;
         int randomLiczba;
         int iloscProb;
         bool czyBylaZnizka;
@@ -21,21 +22,25 @@ namespace burgir
         bool wygrana;
 
 
-        public Koszyk(string koszyk, double cenaZaWszystko)
+        public Koszyk(string koszyk, double cenaZaWszystko, Dictionary<string, int> iloscBurgerow_)
         {
             InitializeComponent();
             koszykPrawdziwy = koszyk != "" ? koszyk : "W koszyku nic niema jeszcze";
             lacznie = cenaZaWszystko;
-            randomLiczba = new Random().Next(1, 21);
-            iloscProb = 5;
-            kod = kody[new Random().Next(0, kody.Length)];
-            MessageBox.Show(randomLiczba.ToString());
+            iloscBurgerow = iloscBurgerow_;
+
+            
+
+            
         }
 
         private void Koszyk_Load(object sender, EventArgs e)
         {
             lbRachunek.Text = koszykPrawdziwy;
             lbLacznie.Text = $@"Łącznie: {lacznie:F2} zł";
+            randomLiczba = new Random().Next(1, 21);
+            iloscProb = 5;
+            kod = kody[new Random().Next(0, kody.Length)];
         }
 
         private void btnZgadnij_Click(object sender, EventArgs e)
@@ -98,6 +103,33 @@ namespace burgir
                 lbLacznie.Text = $@"Łącznie: {lacznie:F2} zł";
                 czyBylaZnizka = false;
             }
+        }
+
+        private void btnZamawiam_Click(object sender, EventArgs e)
+        {
+            if (koszykPrawdziwy == "")
+            {
+                MessageBox.Show("Prosze cos zamów");
+                return;
+            }
+
+            var zamow = new Zamowienia(koszykPrawdziwy.Split("\n"));
+            
+
+            koszykPrawdziwy = "";
+            lacznie = 0;
+            lbRachunek.Text = "W koszyku nic niema jeszcze";
+            lbLacznie.Text = $@"Łącznie: {lacznie:F2} zł";
+            Glowny.koszyk = new List<Glowny.Burger>();
+
+            var paragonForm = new Paragon(new Random().Next(200,229));
+            paragonForm.ShowDialog();
+
+
+
+
+
+            //MessageBox.Show($@"{Application.StartupPath}baza_zamowienia.txt");
         }
     }
 }

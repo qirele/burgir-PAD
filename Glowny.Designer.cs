@@ -421,6 +421,7 @@ namespace burgir
             this.Controls.Add(this.label1);
             this.Name = "Glowny";
             this.Text = "Główne okno";
+            this.Load += new System.EventHandler(this.Glowny_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

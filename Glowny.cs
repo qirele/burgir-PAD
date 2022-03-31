@@ -20,12 +20,17 @@ namespace burgir
             public string nazwa { get; set; }
             
         }
-        List<Burger> koszyk = new List<Burger>();
+        public static List<Burger> koszyk;
 
 
         public Glowny()
         {
             InitializeComponent();
+            
+        }
+        private void Glowny_Load(object sender, EventArgs e)
+        {
+            koszyk = new List<Burger>();
         }
 
         private void ObslugaDodaniaDoKoszyka(string nazwa_, double cena_) 
@@ -69,14 +74,26 @@ namespace burgir
         {
             string building = "";
             double cenaZaWszystko = 0;
-            foreach (var burg in koszyk)
-            {
-                building += $"{burg.nazwa}          {burg.cena} zł\n";
-                cenaZaWszystko += Convert.ToDouble(burg.cena);
-            }
+            Dictionary<string, int> ileTegoBurgera = new Dictionary<string, int>();
 
-            var koszyk2 = new Koszyk(building, cenaZaWszystko);
-            koszyk2.ShowDialog();
+            if (koszyk != null)
+            {
+                foreach (var burg in koszyk)
+                {
+                    building += $"{burg.nazwa}          {burg.cena} zł\n";
+                    cenaZaWszystko += Convert.ToDouble(burg.cena);
+                }
+
+                // https://stackoverflow.com/questions/7832602/list-array-duplicates-with-count
+                ileTegoBurgera = building.Split("\n").GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count());
+
+            }
+               
+
+            var koszykForm = new Koszyk(building, cenaZaWszystko, ileTegoBurgera);
+            koszykForm.ShowDialog();
         }
+
+        
     }
 }

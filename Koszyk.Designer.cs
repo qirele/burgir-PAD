@@ -30,7 +30,7 @@ namespace burgir
         private void InitializeComponent()
         {
             this.lbRachunek = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSosy = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbLacznie = new System.Windows.Forms.Label();
@@ -58,20 +58,20 @@ namespace burgir
             this.lbRachunek.TabIndex = 0;
             this.lbRachunek.Text = "lista dodanych do koszyka burgerow";
             // 
-            // comboBox1
+            // cmbSosy
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSosy.FormattingEnabled = true;
+            this.cmbSosy.Items.AddRange(new object[] {
             "Sos amerykański",
             "Sos słodko-kwaśny",
             "Sos barbecue",
             "Sos musztardowy",
             "Sos czosnkowy",
             "Sos śmietankowy"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 333);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
+            this.cmbSosy.Location = new System.Drawing.Point(12, 333);
+            this.cmbSosy.Name = "cmbSosy";
+            this.cmbSosy.Size = new System.Drawing.Size(121, 23);
+            this.cmbSosy.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
@@ -202,6 +202,7 @@ namespace burgir
             this.btnZamawiam.TabIndex = 8;
             this.btnZamawiam.Text = "Zamawiam i płacę";
             this.btnZamawiam.UseVisualStyleBackColor = true;
+            this.btnZamawiam.Click += new System.EventHandler(this.btnZamawiam_Click);
             // 
             // Koszyk
             // 
@@ -216,7 +217,7 @@ namespace burgir
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbSosy);
             this.Name = "Koszyk";
             this.Text = "Koszyk formularz";
             this.Load += new System.EventHandler(this.Koszyk_Load);
@@ -234,7 +235,7 @@ namespace burgir
 
         private System.Windows.Forms.Label lbRachunek;
         private System.Windows.Forms.Label lbLista;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSosy;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbLacznie;
