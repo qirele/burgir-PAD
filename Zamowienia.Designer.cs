@@ -29,19 +29,11 @@ namespace burgir
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvZamowienia = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvZamowienia)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbZamowienia = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // dgvZamowienia
-            // 
-            this.dgvZamowienia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvZamowienia.Location = new System.Drawing.Point(12, 89);
-            this.dgvZamowienia.Name = "dgvZamowienia";
-            this.dgvZamowienia.RowTemplate.Height = 25;
-            this.dgvZamowienia.Size = new System.Drawing.Size(860, 460);
-            this.dgvZamowienia.TabIndex = 0;
             // 
             // label1
             // 
@@ -52,24 +44,54 @@ namespace burgir
             this.label1.TabIndex = 1;
             this.label1.Text = "Baza zamówień";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(71, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "ID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(338, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "burgery";
+            // 
+            // lbZamowienia
+            // 
+            this.lbZamowienia.AutoSize = true;
+            this.lbZamowienia.Location = new System.Drawing.Point(71, 201);
+            this.lbZamowienia.Name = "lbZamowienia";
+            this.lbZamowienia.Size = new System.Drawing.Size(38, 15);
+            this.lbZamowienia.TabIndex = 4;
+            this.lbZamowienia.Text = "label4";
+            // 
             // Zamowienia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 761);
+            this.Controls.Add(this.lbZamowienia);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvZamowienia);
             this.Name = "Zamowienia";
             this.Text = "Zamowienia";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvZamowienia)).EndInit();
+            this.Load += new System.EventHandler(this.Zamowienia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvZamowienia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbZamowienia;
     }
 }

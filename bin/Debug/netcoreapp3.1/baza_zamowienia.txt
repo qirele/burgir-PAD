@@ -1,0 +1,2 @@
+1, burga #2          35.59 zł 8, burga #5          32.99 zł 1, burga #6          36.99 zł 1, burga #3          24.99 zł 1, burga #4          42.99 zł 1, burga #1          29.99 zł 1
+2, burga #1          29.99 zł 1, burga #2          35.59 zł 1, burga #3          24.99 zł 1, burga #6          36.99 zł 1, burga #5          32.99 zł 5, burga #4          42.99 zł 1

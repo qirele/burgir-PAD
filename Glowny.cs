@@ -70,11 +70,12 @@ namespace burgir
             ObslugaDodaniaDoKoszyka(lbBurga6.Text, double.Parse(cena6.Text.Replace(" zł", "")));
         }
 
+        Dictionary<string, int> ileTegoBurgera;
         private void btnOtworzKoszyk_Click(object sender, EventArgs e)
         {
             string building = "";
             double cenaZaWszystko = 0;
-            Dictionary<string, int> ileTegoBurgera = new Dictionary<string, int>();
+            ileTegoBurgera = new Dictionary<string, int>();
 
             if (koszyk != null)
             {
@@ -96,7 +97,8 @@ namespace burgir
 
         private void btnBazaZamow_Click(object sender, EventArgs e)
         {
-            
+            var x = new Zamowienia(ileTegoBurgera);
+            x.ShowDialog();
         }
     }
 }

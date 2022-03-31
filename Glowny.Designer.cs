@@ -133,9 +133,9 @@ namespace burgir
             this.cena1.AutoSize = true;
             this.cena1.Location = new System.Drawing.Point(81, 58);
             this.cena1.Name = "cena1";
-            this.cena1.Size = new System.Drawing.Size(30, 15);
+            this.cena1.Size = new System.Drawing.Size(45, 15);
             this.cena1.TabIndex = 1;
-            this.cena1.Text = "30 zł";
+            this.cena1.Text = "29,99 zł";
             // 
             // groupBox2
             // 
@@ -233,9 +233,9 @@ namespace burgir
             this.cena3.AutoSize = true;
             this.cena3.Location = new System.Drawing.Point(81, 58);
             this.cena3.Name = "cena3";
-            this.cena3.Size = new System.Drawing.Size(30, 15);
+            this.cena3.Size = new System.Drawing.Size(45, 15);
             this.cena3.TabIndex = 1;
-            this.cena3.Text = "25 zł";
+            this.cena3.Text = "24,99 zł";
             // 
             // btnDodajDoKosz4
             // 
@@ -283,9 +283,9 @@ namespace burgir
             this.cena4.AutoSize = true;
             this.cena4.Location = new System.Drawing.Point(81, 58);
             this.cena4.Name = "cena4";
-            this.cena4.Size = new System.Drawing.Size(30, 15);
+            this.cena4.Size = new System.Drawing.Size(45, 15);
             this.cena4.TabIndex = 1;
-            this.cena4.Text = "42 zł";
+            this.cena4.Text = "42,99 zł";
             // 
             // btnDodajDoKosz5
             // 
@@ -303,7 +303,7 @@ namespace burgir
             this.groupBox5.Controls.Add(this.btnDodajDoKosz5);
             this.groupBox5.Controls.Add(this.lbBurga5);
             this.groupBox5.Controls.Add(this.cena5);
-            this.groupBox5.Location = new System.Drawing.Point(327, 402);
+            this.groupBox5.Location = new System.Drawing.Point(327, 393);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(220, 259);
             this.groupBox5.TabIndex = 5;
@@ -333,9 +333,9 @@ namespace burgir
             this.cena5.AutoSize = true;
             this.cena5.Location = new System.Drawing.Point(81, 58);
             this.cena5.Name = "cena5";
-            this.cena5.Size = new System.Drawing.Size(30, 15);
+            this.cena5.Size = new System.Drawing.Size(45, 15);
             this.cena5.TabIndex = 1;
-            this.cena5.Text = "32 zł";
+            this.cena5.Text = "32,99 zł";
             // 
             // btnDodajDoKosz6
             // 
@@ -353,7 +353,7 @@ namespace burgir
             this.groupBox6.Controls.Add(this.btnDodajDoKosz6);
             this.groupBox6.Controls.Add(this.lbBurga6);
             this.groupBox6.Controls.Add(this.cena6);
-            this.groupBox6.Location = new System.Drawing.Point(602, 402);
+            this.groupBox6.Location = new System.Drawing.Point(602, 393);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(220, 259);
             this.groupBox6.TabIndex = 5;
@@ -383,9 +383,9 @@ namespace burgir
             this.cena6.AutoSize = true;
             this.cena6.Location = new System.Drawing.Point(81, 58);
             this.cena6.Name = "cena6";
-            this.cena6.Size = new System.Drawing.Size(30, 15);
+            this.cena6.Size = new System.Drawing.Size(45, 15);
             this.cena6.TabIndex = 1;
-            this.cena6.Text = "36 zł";
+            this.cena6.Text = "36,99 zł";
             // 
             // btnOtworzKoszyk
             // 
